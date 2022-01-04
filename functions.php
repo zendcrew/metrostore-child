@@ -19,7 +19,7 @@ if ( !function_exists( 'metrostore_child_woocommerce_before_shop_loop_item' ) ) 
                         echo '<div class="icon-new-label new-right">' . esc_html__( 'New', 'metrostore' ) . '</div>';
                     }
                     ?>
-
+                    <?php do_action('metrostore_child_after_sale_flash'); ?>
                     <div class="pr-img-area">
                         <figure>
         <?php echo get_the_post_thumbnail( $product->get_id(), 'shop_catalog', array( 'class' => 'first-img' ) ); ?> 
@@ -33,7 +33,7 @@ if ( !function_exists( 'metrostore_child_woocommerce_before_shop_loop_item' ) ) 
 
                     <div class="pr-info-area">
                         <div class="pr-button">
-                            <div class="mt-button add_to_wishlist">sss
+                            <div class="mt-button add_to_wishlist">
         <?php
         if ( function_exists( 'metrostore_wishlist_products' ) ) {
             metrostore_wishlist_products();
@@ -77,6 +77,7 @@ if ( !function_exists( 'metrostore_child_woocommerce_before_shop_loop_item' ) ) 
                                 <?php woocommerce_template_loop_price(); ?>
                             </div>
                         </div>
+                        <?php do_action('metrostore_child_after_price'); ?>
                     </div>
                 </div>
         <?php
