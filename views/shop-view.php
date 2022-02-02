@@ -11,8 +11,7 @@
             if ( $metrostore_label != '' ) {
                 echo '<div class="icon-new-label new-right">' . esc_html__( 'New', 'metrostore' ) . '</div>';
             }
-            ?>
-            <?php do_action( 'metrostore_child_after_sale_flash' ); ?>
+            ?>            
             <div class="pr-img-area">
                 <figure>
                     <?php echo get_the_post_thumbnail( $product->get_id(), 'shop_catalog', array( 'class' => 'first-img' ) ); ?> 
@@ -21,7 +20,7 @@
                 <div class="add-to-cart-mt">                	      
                     <?php woocommerce_template_loop_add_to_cart(); ?> 
                 </div>
-
+                <?php do_action( 'metrostore_child_after_sale_flash' ); ?>
             </div>
 
             <div class="pr-info-area">
