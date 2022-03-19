@@ -1,5 +1,7 @@
 <?php
 
+include 'compatibility/woomode.php';
+
 if ( !function_exists( 'metrostore_child_woocommerce_before_shop_loop_item' ) ) {
 
     function metrostore_child_woocommerce_before_shop_loop_item() {
