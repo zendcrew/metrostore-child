@@ -4,7 +4,9 @@ function metrostore_register_woomode_view_locations( $view_locations ) {
 
     $view_locations[ 'shop' ][ 'before_title' ][ 'hook' ] = 'metrostore_child_before_title';
     $view_locations[ 'shop' ][ 'before_title' ][ 'priority' ] = 10;
-    
+
+    $view_locations[ 'shop' ][ 'product_thumbnail' ][ 'hook' ] = 'metrostore_child_after_sale_flash';
+    $view_locations[ 'shop' ][ 'before_title' ][ 'priority' ] = 10;
     return $view_locations;
 }
 
